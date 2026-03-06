@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body.auth-page {
+    font-family: 'Inter', sans-serif;
+    color: #111;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 16px;
+    overflow: hidden;
+}
+
+.auth-container {
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 32px);
+    background-color: #fff;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.auth-left-panel {
+    flex: 1.2;
+    padding: 8px;
+    background-color: #fff;
+}
+
+.auth-image-bg {
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1660982238213-eeef93d9dc16?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    border-radius: 24px;
+    height: 100%;
+    padding: 52px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+}
+
+.auth-right-panel {
+    flex: 1;
+    background-color: #fff;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.auth-form-wrapper {
+    width: 100%;
+    max-width: 420px;
+    margin: auto;
+}
+
+.auth-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 20px;
+    gap: 8px;
+    width: 100%;
+    color: #111;
+    text-decoration: none;
+}
+
+.auth-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.auth-header h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 40px;
+    margin-bottom: 12px;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+}
+
+.auth-header p {
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.auth-form-group {
+    margin-bottom: 24px;
+}
+
+.auth-form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #374151;
+}
+
+.auth-input-wrapper {
+    position: relative;
+}
+
+.auth-input-wrapper input {
+    width: 100%;
+    padding: 16px;
+    background-color: #f9fafb;
+    border: 1px solid #f9fafb;
+    border-radius: 12px;
+    font-size: 15px;
+    font-family: 'Inter', sans-serif;
+    outline: none;
+    transition: all 0.2s;
+}
+
+.auth-input-wrapper input:focus {
+    border-color: #d1d5db;
+    background-color: #fff;
+}
+
+.auth-input-wrapper input::placeholder {
+    color: #9ca3af;
+}
+
+.auth-toggle-password {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #6b7280;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.auth-form-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.auth-remember-me {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    color: #4b5563;
+    cursor: pointer;
+}
+
+.auth-remember-me input {
+    margin-right: 8px;
+    accent-color: #000;
+}
+
+.auth-forgot-password {
+    font-size: 13px;
+    color: #4b5563;
+    text-decoration: none;
+}
+
+.auth-btn-primary {
+    width: 100%;
+    padding: 16px;
+    background-image: linear-gradient(to right, var(--primary-dark) 0%, var(--primary-blue) 100%);
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 16px;
+    transition: all 0.3s ease;
+    background-size: 150% auto;
+}
+
+.auth-btn-primary:hover {
+    background-position: right center;
+}
+
+.auth-signup-link {
+    text-align: center;
+    font-size: 14px;
+    color: #6b7280;
+    width: 100%;
+}
+
+.auth-signup-link a {
+    color: #000;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+@media (max-width: 950px) {
+    body.auth-page {
+        overflow: auto;
+        padding: 16px;
+    }
+    .auth-container {
+        flex-direction: column;
+        height: auto;
+        min-height: calc(100vh - 32px);
+        border-radius: 20px;
+    }
+    .auth-left-panel {
+        flex: none;
+        height: 400px;
+        padding: 8px;
+    }
+    .auth-right-panel {
+        flex: none;
+        padding: 40px 20px;
+    }
+    .auth-form-wrapper {
+        margin: 30px auto;
+    }
+}
